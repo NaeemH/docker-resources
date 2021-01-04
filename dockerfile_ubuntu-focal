@@ -1,0 +1,11 @@
+FROM ubuntu:20.04
+MAINTAINER Naeem Hossain <naeemh.github.io>
+
+# Install debian repositories
+RUN apt-get update && apt-get upgrade -y && / 
+	apt-get install build-essential devscripts vim dh-make wget curl -y
+
+RUN echo '\nDEBEMAIL="naeemhossain.mail@gmail.com"\nDEBFULLNAME="Naeem Hossain"\nexport DEBEMAIL DEBFULLNAME' >> /root/.bashrc
+
+# docker build . -t build20
+# sudo docker run -v /home/nhossain/tmp:/root/tmp -it build20 /bin/bash
